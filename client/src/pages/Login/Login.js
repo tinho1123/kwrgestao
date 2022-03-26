@@ -10,13 +10,14 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const handleClick = async () => {
-    if( email.includes('@') && email.includes('.com') && senha > 6) {
-      const user = Axios.get('http://localhost:5000/getuser')
-        .then(result => console.log(result.data))
-        .catch(err => console.log(err));
-        console.log(navigate('/gestao-de-pedidos'))
-        return user;
+  const handleClick = () => {
+    if( email.includes('@') && email.includes('.com') && senha.length > 6) {
+      Axios.post('http://localhost:5000/login', {
+        email,
+        senha
+      })
+      .then(() => navigate('/gestao-de-pedidos'))
+      .catch((err) => console.log(err))
     } else {
 
     }

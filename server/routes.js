@@ -7,8 +7,7 @@ const KwrUsersControllers = require('./controllers/KwrUsersControllers');
 
 // Rota KwrUsers
 
-routes
-    .get('/getuser', KwrUsersControllers.get)
-    .post('/createuser', KwrUsersControllers.create)
+routes.post('/login', KwrUsersControllers.verificationLogin)
+routes.post('/createuser', KwrUsersControllers.create)
 
 module.exports = routes;

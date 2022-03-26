@@ -1,13 +1,19 @@
-const KwrData = require('../models/KwrUsersData');
+const KwrUsersServices = require('../services/KwrUsersServices');
 
+async function verificationLogin({ body: { email, senha } }, res) {
 
-async function get(_req, res) {
-    const usersList = await KwrData.find();
+    const service = await KwrUsersServices.verificationLoginService({ email, senha });
 
-    return res.status(200).json(usersList);
+    if(service instanceof Error) {
+        return res.status(401).json({ error: service.message })
+    }
+
+    res.status(200).json(service);
 }
 
 async function create({ body: { email, senha, admPriority } }, res) {
+
+    
 
     if (!email) {
         return res.status(400).json({ error: "Necessário inserir seu email!"})
@@ -30,6 +36,6 @@ async function create({ body: { email, senha, admPriority } }, res) {
 
 
 module.exports = {
-    get,
+    verificationLogin,
     create,
 }
