@@ -12,12 +12,12 @@ export default function Sidebar() {
             <p>Financeiro</p>
         </div>
         </NavLink>
-        <NavLink to='fiados' style={({'text-decoration': 'none'})}>
+        <NavLink to='/gestao-de-pedidos/fiados' style={({'text-decoration': 'none'})}>
           <div className='li-block'>
             <p>Fiados</p>
         </div>
         </NavLink>
-        <NavLink to='configuracoes' style={({'text-decoration': 'none'})}>
+        <NavLink to='/gestao-de-pedidos/configuracoes' style={({'text-decoration': 'none'})}>
           <div className='li-block'>
             <p>Configurações</p>
         </div>
