@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import GestaoDePedidos from './pages/GestaoDePedidos/GestaoDePedidos'
-import Login from './pages/Login/Login'
+import GestaoDePedidos from './pages/GestaoDePedidos'
+import Login from './pages/Login'
 
 export default function App() {
   return (

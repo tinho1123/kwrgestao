@@ -1,6 +1,6 @@
 import React from 'react'
 import './GestaoDePedidos.css';
-import Sidebar from '../../components/Sidebar/Sidebar';
+import Sidebar from '../../components/Sidebar';
 import ContentCentral from '../../components/ContentCentral';
 
 
