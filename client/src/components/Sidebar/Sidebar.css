@@ -1,0 +1,9 @@
+.sideBar {
+    background-color: red;
+    width: 250px;
+    height: 100vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
