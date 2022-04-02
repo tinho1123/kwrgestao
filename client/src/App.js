@@ -1,8 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ContentCentral from './pages/GestaoDePedidos/Financeiro'
-import Fiados from './pages/GestaoDePedidos/Fiados'
-import Configuracoes from './pages/GestaoDePedidos/Configuracoes'
 import Login from './pages/Login'
 
 export default function App() {
