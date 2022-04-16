@@ -1,7 +1,7 @@
 import React from 'react'
-import './GestaoDePedidos.css';
-import Sidebar from '../../components/Sidebar/Sidebar';
-import ContentCentral from '../../components/ContentCentral';
+import './Financeiro.css';
+import Sidebar from '../../../components/Sidebar';
+import ContentCentral from '../../../components/ContentCentral';
 
 
 export default function GestaoDePedidos() {

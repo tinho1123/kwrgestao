@@ -2,7 +2,7 @@ const express = require('express');
 
 const routes = express.Router();
 
-const KwrUsersControllers = require('./controllers/KwrUsersControllers');
+const KwrUsersControllers = require('../controllers/KwrUsersControllers');
 
 
 // Rota KwrUsers

@@ -1,14 +1,17 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import GestaoDePedidos from './pages/GestaoDePedidos/GestaoDePedidos'
-import Login from './pages/Login/Login'
+import ContentCentral from './pages/GestaoDePedidos/Financeiro'
+import Login from './pages/Login'
 
 export default function App() {
   return (
     <Router>
       <Routes>
         <Route path='/' element={ <Login />} />
-        <Route path='/gestao-de-pedidos' element={<GestaoDePedidos />} />
+        <Route path='/gestao-de-pedidos' element={<ContentCentral />} />
+        <Route path='/gestao-de-pedidos/fiados' element={<ContentCentral />} />
+        <Route path='/gestao-de-pedidos/configuracoes' element={<ContentCentral />} />
+        
       </Routes>
     </Router>
   )
