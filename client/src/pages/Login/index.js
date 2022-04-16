@@ -18,9 +18,16 @@ export default function Login() {
       })
       .then(() => navigate('/gestao-de-pedidos'))
       .catch((err) => console.log(err))
-    } else {
-
     }
+
+  }
+
+  const handleDisabledButton = (email, senha) => {
+    const regex = /\S+@\S+\.\S+/
+    if (regex.test(email) && senha.length > 6) {
+      return false;
+    }
+    return true;
   }
 
   return (
@@ -54,6 +61,7 @@ export default function Login() {
               className='button_form'
               type='button'
               onClick={handleClick}
+              disabled={handleDisabledButton(email, senha) }
             >
               Logar
             </button>
